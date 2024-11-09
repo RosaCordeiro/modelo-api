@@ -1,0 +1,4 @@
+scrape_configs:
+  - job_name: 'node_cron_jobs'
+    static_configs:
+      - targets: ['localhost:3014']
