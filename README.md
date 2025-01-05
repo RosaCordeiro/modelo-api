@@ -1,6 +1,8 @@
 # modelo-api
 
+Para executar sem o docker é necessário ao menos criar um arquivo .env e setar a propriedade PORT.
 
+Utilizando o docker é necessário configurar a porta dentro do docker compose.
 
 ## Getting started
 
