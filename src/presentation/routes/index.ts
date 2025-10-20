@@ -1,10 +1,8 @@
 import { Router } from "express";
 import { outrosRouter } from "./outros.routes";
-import { SFTPRouter } from "./sftp.routes";
 
 const router = Router();
 
-router.use('/outros', outrosRouter);
-router.use('/sftp', SFTPRouter);
+router.use('/', outrosRouter);
 
 export { router };
