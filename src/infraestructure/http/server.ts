@@ -1,7 +1,8 @@
+
 import "dotenv/config";
+import { router } from "../../presentation/routes";
 import express from "express"
 import "@/shared/container";
-import { router } from "../../presentation/routes";
 import cors from 'cors';
 
 const app = express()
@@ -25,5 +26,5 @@ app.use(router);
 const port = process.env.PORT
 
 app.listen(port, () => {
-    console.log(`Listening on PORT ${port}`)
+    console.log(`Listening on PORT ${port}`, 'PID:', process.pid)
 })
