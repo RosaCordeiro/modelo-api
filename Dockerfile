@@ -1,16 +1,23 @@
-FROM dbutech/node-java:latest
+# 1️⃣ Imagem base
+FROM node:18
 
-# Create app directory
-RUN mkdir -p /usr/src/app
+# 2️⃣ Diretório de trabalho dentro do container
 WORKDIR /usr/src/app
 
-# Install app dependencies
-COPY package.json /usr/src/app/
-# COPY .npmrc /usr/src/app/ 
+# 3️⃣ Copia package.json e package-lock.json
+COPY package*.json ./
 
+# 4️⃣ Instala dependências
 RUN npm install
-# Bundle app source
-COPY . /usr/src/app
 
-EXPOSE 3014
-CMD ["npm","start"]
+# 5️⃣ Copia todo o código da aplicação
+COPY . .
+
+# 6️⃣ Instala ts-node globalmente para rodar TS direto (opcional)
+RUN npm install -g ts-node typescript
+
+# 7️⃣ Expõe a porta que sua API usa
+EXPOSE xxxx
+
+# 8️⃣ Comando para iniciar o app
+CMD ["npm", "run", "start"]
