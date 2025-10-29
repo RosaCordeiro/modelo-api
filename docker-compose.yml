@@ -2,23 +2,14 @@ services:
   app:
     build: .
     container_name: api-modelo
-    working_dir: /usr/src/app
+    mem_limit: 1024m
+    network_mode: bridge
     volumes:
-      - ./:/usr/src/app
+      - ./:/usr/app
     ports:
       - "xxxx:xxxx"
-    environment:
-      - PORT=xxxx
-      - APINAME=api-modelo
-      - AMBIENTE=DEV
     logging:
       driver: "fluentd"
       options:
-        fluentd-address: 172.17.0.1:24224
+        fluentd-address: ipfluentd:portafluentd
         tag: api-modelo.logs
-networks:
-  default:
-    name: 
-      efk-network
-    external:
-      true
