@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    container_name: api-modelo
+    mem_limit: 1024m
+    network_mode: bridge
+    volumes:
+      - ./:/usr/app
+    ports:
+      - "xxxx:xxxx"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: ipfluentd:portafluentd
+        tag: api-modelo.logs
