@@ -1,0 +1,14 @@
+partitions: 
+replication: 
+
+topics:
+  - name: 
+  - name: 
+
+retry_topics:
+  - name: 
+    retention_ms: 
+  - name: 
+    retention_ms: 
+  - name: 
+    retention_ms: 
