@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import { LoggerProvider } from '../providers/logger/create-logger.provider';
-import { getOrquestrador } from './orquestrar-workers.singleton';
 
 export const logger = new LoggerProvider({
     pretty: process.env.NODE_ENV !== 'production',
@@ -12,10 +11,6 @@ export const logger = new LoggerProvider({
 
 export const loggerLevelHandler = async (req: Request, res: Response) => {
     const { logLevel } = req.body
-
-    const orquestrador = await getOrquestrador();
-
-    orquestrador.mudarLogLevel(logLevel)
 
     const levelAlterado = logger.setLevel(logLevel);
 
