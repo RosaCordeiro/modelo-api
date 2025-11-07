@@ -1,14 +1,17 @@
-partitions: 
-replication: 
+partitions: 3
+replication: 1
 
 topics:
   - name: 
-  - name: 
+  
 
 retry_topics:
   - name: 
-    retention_ms: 
+    retention_ms: 50
   - name: 
-    retention_ms: 
+    retention_ms: 300
   - name: 
-    retention_ms: 
+    retention_ms: 1200
+
+dlq_topics:
+  - name: 
