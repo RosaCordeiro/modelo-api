@@ -1,5 +1,5 @@
 import { logger } from "@/shared/singletons/logger.singleton";
-import { createTopicsFromYaml } from "./kafka.create-topics";
+import { createTopicsFromYaml } from "./kafka.topics";
 
 export class MainServer {
     public async start(): Promise<void> {
