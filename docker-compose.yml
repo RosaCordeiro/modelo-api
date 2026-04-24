@@ -7,7 +7,7 @@ services:
     volumes:
       - ./:/usr/app
     ports:
-      - "xxxx:xxxx"
+      - "9999:9999"
     logging:
       driver: "fluentd"
       options:

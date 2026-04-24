@@ -1,4 +1,4 @@
-import { metricsHandler } from './../../shared/providers/metrics/instrumentation';
+import { metricsHandler } from 'light-node-metrics';
 import { ItsAliveController } from "@/presentation/controllers/Its-alive.controller";
 import { getLoggerLevel, loggerLevelHandler } from '@/shared/singletons/logger.singleton';
 import { Router } from "express";

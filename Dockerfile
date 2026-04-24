@@ -23,6 +23,6 @@ RUN npm install
 
 COPY . /usr/src/app
 
-EXPOSE xxxx
+EXPOSE 9999
 
 CMD ["npm", "run", "start"]
