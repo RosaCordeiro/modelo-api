@@ -7,6 +7,7 @@ export const logger = new LoggerProvider({
     maxSize: '5M',
     rotateInterval: '1d',
     maxFiles: 10,
+    fileName: `${process.env.APINAME}.log`,
 });
 
 export const loggerLevelHandler = async (req: Request, res: Response) => {
